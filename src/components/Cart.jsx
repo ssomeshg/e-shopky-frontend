@@ -6,7 +6,7 @@ export default function Cart(props){
     const cartCount = props.cartCount
     console.log(cartCount)
 
-    return <div className='bg-white z-30 min-w-80 w-full -left-2/4 -translate-x-2/4 top-10 rounded-md absolute px-3 py-3 border border-gray-200 shadow-md'>
+    return <div className=' bg-white z-30 min-w-80 w-full -left-2/4 -translate-x-2/4 top-10 rounded-md absolute px-3 py-3 border border-gray-200 shadow-md'>
     <p className='primaryTextColor text-lg font-bold '>Cart</p>
     <ul>{
       cartList.map((item) => {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Cart from './Cart'
 export default function Navbar(props) {
 
-  
+
   const cartList = props.cartList
   const cartCount = props.cartCount
 
@@ -14,7 +14,7 @@ export default function Navbar(props) {
         <img src={navLogo} alt="" />
       </div>
       <div className="navitems">
-        <ul className='navList'>
+        <ul className='hidden md:flex md:gap-5 md:relative'>
           <li><Link to={'/'}>Home</Link></li>
           <li><Link to={'/'}>Collections</Link></li>
           <li><Link to={'/'}>Men's</Link></li>
@@ -23,16 +23,16 @@ export default function Navbar(props) {
 
         </ul>
       </div>
-      <div className="nav--right">
+      <div className="nav--right md:relative">
         <div className="cart relative cursor-pointer">
           <div className=''>
             <svg width="24" height="26" viewBox="0 0 24 26" fill="none" strokeWidth={2} xmlns="http://www.w3.org/2000/svg">
               <path d="M22.92 23.01C22.9493 23.2705 22.923 23.5342 22.8429 23.784C22.7629 24.0336 22.631 24.2635 22.4557 24.4585C22.28 24.6532 22.065 24.8086 21.825 24.9141C21.5849 25.0198 21.3251 25.0734 21.0629 25.0714H2.93715C2.67487 25.0734 2.41515 25.0198 2.17508 24.9141C1.935 24.8086 1.72002 24.6532 1.5443 24.4585C1.36904 24.2635 1.23707 24.0336 1.15705 23.784C1.07702 23.5342 1.05076 23.2705 1.08001 23.01L2.7143 8.35712H21.2857L22.92 23.01Z" stroke="#3F3F3F" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M7.35715 8.35713V5.57142C7.35715 4.34006 7.8463 3.15912 8.717 2.28841C9.58771 1.41771 10.7686 0.928558 12 0.928558C13.2314 0.928558 14.4123 1.41771 15.283 2.28841C16.1537 3.15912 16.6429 4.34006 16.6429 5.57142V8.35713" stroke="#3F3F3F" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <div className="badge"><span>{cartCount}</span></div>
+            <div className="badge"><span>0</span></div>
           </div>
-          <Cart cartList={cartList} cartCount={cartCount}/>
+          <Cart cartList={cartList} />
         </div>
         {/* <div className="wishlist">
           <svg width="26" height="22" viewBox="0 0 26 22" fill="none" strokeWidth={2} xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@ export default function Navbar(props) {
           </svg>
           <div className="badge"><span>1</span></div>
         </div> */}
-        <div className="profile">
+        <div className="hidden md:flex md:gap-5 profile">
           <div className="profile--detail">
             <p>Hello user</p>
             <p>sign in</p>
@@ -56,6 +56,13 @@ export default function Navbar(props) {
           </div>
         </div>
       </div>
+      {/* <div className='block md:hidden'>
+        <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.75 4.5H13.25" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M0.75 9.5H13.25" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+      </div> */}
     </div>
   </>
 }

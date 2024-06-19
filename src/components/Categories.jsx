@@ -5,23 +5,24 @@ export default function Categories(props) {
     const productList = props.productList
     const setProductList = props.setProductList
     const setCartList = props.setCartList
-    const cartCount = props.cartCount
     const cartList = props.cartList
-    const setCartCount = props.setCartCount
+    
 
-    const handleAddCart = (addCart) => {
+    const handleAddCart = (addCartId) => {
+     
+        const itemToAdd = productList.find((product) => product.id === addCartId);
+    
 
-        var tempCart = productList.filter(function (cartItem) {
-            if (cartItem.id === addCart) {
-                return true
-            } else {
-                return false
-            }
-        })
-        setCartList(tempCart)
-        
+        if (itemToAdd) {
+            setCartList((prevCartList) => [...prevCartList, itemToAdd]);
+            
+        } else {
+            console.log('Item not found');
+        }
+        console.log(cartList);
+    };
 
-    }
+    
     return <>
         <div className="container mt-20">
             <div className="category_title mb-4">
@@ -67,7 +68,7 @@ export default function Categories(props) {
                             </div>
                             <div className="category--btn mt-3 mb-3">
                                 <button>View Product</button>
-                                <button onClick={() => handleAddCart(item.id)}>Add To Cart</button>
+                                <button onClick={() => handleAddCart(item.id,item.productName)}>Add To Cart</button>
                             </div>
 
                         </div>
