@@ -11,7 +11,7 @@ export default function Navbar(props) {
   return <>
     <div className="container navbar p-3 sticky top-0 z-50 bg-white">
       <div className="navlogo">
-        <img src={navLogo} alt="" />
+        <img src={navLogo} className='w-full' alt="" />
       </div>
       <div className="navitems">
         <ul className='hidden md:flex md:gap-5 md:relative'>
