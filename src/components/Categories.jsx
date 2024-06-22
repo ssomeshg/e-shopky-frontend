@@ -74,7 +74,7 @@ export default function Categories(props) {
                                 />
                                 <div className="wishlist--heart cursor-pointer bg-[var(--secondary-litecolor)] w-10 h-10 rounded-full flex justify-center items-center absolute z-20 top-5 right-5">
                                     <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.0041 12.3826L1.52973 7.42397C-1.44548 4.44876 2.92807 -1.26363 7.0041 3.35785C11.0801 -1.26363 15.4339 4.4686 12.4785 7.42397L7.0041 12.3826Z" stroke="#D33F00" stroke-linecap="round" stroke-linejoin="round" stroke-width="10%" />
+                                        <path d="M7.0041 12.3826L1.52973 7.42397C-1.44548 4.44876 2.92807 -1.26363 7.0041 3.35785C11.0801 -1.26363 15.4339 4.4686 12.4785 7.42397L7.0041 12.3826Z" stroke="#D33F00" stroke-linecap="round" strokeLinejoin="round" stroke-width="10%" />
                                     </svg>
                                 </div>
                             </div>

@@ -20,13 +20,13 @@ export default function Cart(props) {
     setCartList(tempCart)
   }
 
-  return <div className='cartList bg-white z-30 min-w-80 w-full -right-[400%] top-10 rounded-md absolute px-3 py-3 border border-gray-200 shadow-md'>
+  return <div className='cartList hidden md:block bg-white z-30 min-w-80 w-full -right-[400%] top-10 rounded-md absolute px-3 py-3 border border-gray-200 shadow-md'>
     <p className='primaryTextColor text-lg font-bold'>Cart</p>
     <ul>
-      {cartList.length === 0 ? <p>Cart is Empty</p> : "View Cart"}
+      {cartList.length === 0 ? <p>Cart is Empty</p> : ""}
       {
-        cartList.map((item,index) => {
-          return <li className='border-b pb-2 pt-2' key={index}> 
+        cartList.map((item, index) => {
+          return <li className='border-b pb-2 pt-2' key={index}>
             <div className='flex gap-2 justify-between items-center'>
               <div>
                 <img src={item.image} alt="" className='w-12 h-12 object-cover rounded-md' />
@@ -47,9 +47,9 @@ export default function Cart(props) {
         })
 
       }
-      <div>
-        <p>lk</p>
-      </div>
+      {
+        cartList.length > 0 ? <div><p>View Cart</p></div> : ""
+      }
     </ul>
   </div>
 }
