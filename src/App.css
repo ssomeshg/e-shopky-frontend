@@ -177,3 +177,24 @@
   width: 48%;
 }
 
+
+/* Cart  */
+@media (min-width:768px){
+  .cartList{
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(-50px);
+  }
+  .cart:hover .cartList{
+    transition: 1s;
+    visibility: visible;
+    opacity: 100%;
+    transform: translateY(0);
+  }
+  
+}
+.cartList{
+  visibility: hidden;
+  opacity: 0;
+}

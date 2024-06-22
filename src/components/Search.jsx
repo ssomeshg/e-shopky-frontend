@@ -7,8 +7,8 @@ export default function Search() {
 
             <div className="w-100 border-2 border-[var(--primary-color)] rounded-3xl  bg-white flex justify-between items-center" >
                 <div className="flex">
-                    <p className="primaryTextColor w-[40%] text-lg flex items-center gap-2 px-3 cursor-pointer"><span>
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p className="flex-1 primaryTextColor text-sm flex items-center gap-2 px-3 cursor-pointer"><span>
+                        <svg width="14" height="14" strokeWidth={2} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_4_26)">
                             <path d="M10.1939 0.642853H0.642883" stroke="#D33F00" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M10.1939 4.2244H3.62756" stroke="#D33F00" stroke-linecap="round" stroke-linejoin="round" />
@@ -22,8 +22,8 @@ export default function Search() {
                             </clipPath>
                         </defs>
                     </svg>
-                    </span>Sort by</p>
-                    <input type="text" className="search--bar__filter w-[60%] h-max " />
+                    </span><span className="hidden md:block">Sort by</span></p>
+                    <input type="search" className="search--bar__filter w-[60%] h-max flex-2" placeholder="Search Product Here!!" />
                 </div>
                 <button className="bg-[var(--primary-color)] rounded-3xl p-2 text-white flex items-center gap-2 px-4 float-end"><span><svg width="14" height="14" strokeWidth={2} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_2_19)">
@@ -36,7 +36,7 @@ export default function Search() {
                         </clipPath>
                     </defs>
                 </svg>
-                </span>Search by filter
+                </span><span className="hidden md:block">Search by filter</span>
                 </button>
 
             </div>

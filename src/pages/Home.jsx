@@ -3,15 +3,21 @@ import Slider from "../components/Slider";
 
 
 export default function Home(props) {
-  const productList = props.productList
-  const setProductList = props.setProductList
-  const setCartList = props.setCartList
-  const cartList = props.cartList
-  const setCartCount = props.setCartCount
+  const {
+    productList,
+    setProductList,
+    setCartList,
+    cartList,
+    setCartCount,
+    productApi,
+    setProductApi
+} = props;
+
+
   return <>
     <div>
       <Slider />
-      <Categories cartList={cartList} setCartCount={setCartCount} setCartList={setCartList} productList={productList} setProductList={setProductList} />
+      <Categories setProductApi={setProductApi} productApi={productApi} cartList={cartList}  setCartCount={setCartCount} setCartList={setCartList} productList={productList} setProductList={setProductList} />
     </div>
   </>
 }

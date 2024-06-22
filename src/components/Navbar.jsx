@@ -1,17 +1,24 @@
-import { useState } from 'react'
+
 import navLogo from '../assets/image.png'
 import { Link } from 'react-router-dom'
 import Cart from './Cart'
 export default function Navbar(props) {
 
 
-  const cartList = props.cartList
-  const cartCount = props.cartCount
+  const {
+    setCartList,
+    cartList
+  } = props
 
+
+
+  const cartView = () => {
+
+  }
   return <>
     <div className="container navbar p-3 sticky top-0 z-50 bg-white">
       <div className="navlogo">
-        <img src={navLogo} className='w-full' alt="" />
+        <img src={navLogo} alt="" />
       </div>
       <div className="navitems">
         <ul className='hidden md:flex md:gap-5 md:relative'>
@@ -19,23 +26,29 @@ export default function Navbar(props) {
           <li><Link to={'/'}>Collections</Link></li>
           <li><Link to={'/'}>Men's</Link></li>
           <li><Link to={'/'}>Women's</Link></li>
-          <li><Link to={'/'}>Cart</Link></li>
+          <li><Link to={'/cartpage'}>Cart</Link></li>
 
         </ul>
       </div>
       <div className="nav--right md:relative">
-        <div className="cart relative cursor-pointer">
+       
+       
+        <div className="cart relative cursor-pointer" onClick={cartView}>
           <div className=''>
-            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" strokeWidth={2} xmlns="http://www.w3.org/2000/svg">
+          <Link to={"/cartpage"}>
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke-width={2} xmlns="http://www.w3.org/2000/svg">
               <path d="M22.92 23.01C22.9493 23.2705 22.923 23.5342 22.8429 23.784C22.7629 24.0336 22.631 24.2635 22.4557 24.4585C22.28 24.6532 22.065 24.8086 21.825 24.9141C21.5849 25.0198 21.3251 25.0734 21.0629 25.0714H2.93715C2.67487 25.0734 2.41515 25.0198 2.17508 24.9141C1.935 24.8086 1.72002 24.6532 1.5443 24.4585C1.36904 24.2635 1.23707 24.0336 1.15705 23.784C1.07702 23.5342 1.05076 23.2705 1.08001 23.01L2.7143 8.35712H21.2857L22.92 23.01Z" stroke="#3F3F3F" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M7.35715 8.35713V5.57142C7.35715 4.34006 7.8463 3.15912 8.717 2.28841C9.58771 1.41771 10.7686 0.928558 12 0.928558C13.2314 0.928558 14.4123 1.41771 15.283 2.28841C16.1537 3.15912 16.6429 4.34006 16.6429 5.57142V8.35713" stroke="#3F3F3F" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <div className="badge"><span>0</span></div>
+           
+            <div className="badge"><span>{cartList.length}</span></div>
+            </Link>
           </div>
-          <Cart cartList={cartList} />
+          <Cart setCartList={setCartList} cartList={cartList} />
         </div>
+       
         {/* <div className="wishlist">
-          <svg width="26" height="22" viewBox="0 0 26 22" fill="none" strokeWidth={2} xmlns="http://www.w3.org/2000/svg">
+          <svg width="26" height="22" viewBox="0 0 26 22" fill="none" stroke-width={2} xmlns="http://www.w3.org/2000/svg">
             <path d="M13.0076 20.9963L2.84095 11.7874C-2.68444 6.26199 5.43787 -4.34673 13.0076 4.23602C20.5774 -4.34673 28.663 6.29884 23.1744 11.7874L13.0076 20.9963Z" stroke="#3F3F3F" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
           <div className="badge"><span>1</span></div>
