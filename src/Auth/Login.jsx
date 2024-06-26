@@ -13,7 +13,7 @@ export default function Login() {
     }
     return <>
         <div className="w-full text-center">
-            <div className="w-1/2 h-[60vh] bg-white mx-auto border-2 border p-2 py-5 rounded-lg shadow-2xl">
+            <div className="w-full md:w-1/2 min-h-[60vh] bg-white mx-auto border-2 border p-2 py-5 rounded-lg shadow-2xl">
                 <div className="heading capitalize text-center">
                     LOGIN
                 </div>

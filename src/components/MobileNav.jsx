@@ -36,7 +36,7 @@ export default function MobileNav() {
                     </div>
                 </li>
                 <li>
-                    <Link to={"/"}><svg width="20" height="20" stroke-width={1} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <Link to={"/login"}><svg width="20" height="20" stroke-width={1} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1222_38055)">
                             <path d="M7 8C8.38071 8 9.5 6.88071 9.5 5.5C9.5 4.11929 8.38071 3 7 3C5.61929 3 4.5 4.11929 4.5 5.5C4.5 6.88071 5.61929 8 7 8Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M2.72998 11.8999C3.17622 11.1674 3.80339 10.562 4.55119 10.142C5.29899 9.72186 6.14227 9.50122 6.99998 9.50122C7.85769 9.50122 8.70097 9.72186 9.44877 10.142C10.1966 10.562 10.8237 11.1674 11.27 11.8999" stroke="white" stroke-linecap="round" stroke-linejoin="round" />

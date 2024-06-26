@@ -38,9 +38,9 @@ export default function Signup(){
 
     return( <>
         <div className="w-full text-center">
-            <div className="w-1/2 min-h-[60vh] h-full bg-white mx-auto border-2 border p-2 py-5 rounded-lg shadow-2xl">
+            <div className="w-full px-2 md:px-0 md:w-1/2 min-h-[60vh] h-full bg-white mx-auto border-2 border p-2 py-5 rounded-lg shadow-2xl">
                 <div className="heading capitalize text-center">
-                    LOGIN
+                    SIGN UP
                 </div>
                 <div className="grid gap-2 mt-3">
 
