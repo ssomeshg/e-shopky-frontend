@@ -32,13 +32,15 @@ export default function Categories(props) {
     const handleAddCart = (addCartId) => {
 
         const itemToAdd = productApi.find((product) => {
-                if (product.id === addCartId) {
-                    return product
-                }
+            
+            if (product.id === addCartId) {
+                return product
+
+
             }
+        }
         )
 
-        console.log(itemToAdd)
         if (itemToAdd) {
             setCartList((prevCartList) => [...prevCartList, itemToAdd]);
 
@@ -47,18 +49,21 @@ export default function Categories(props) {
             console.log('Item not found');
         }
 
+
+
+
     };
 
     const Loading = () => {
         return <>
             <p className="text-center primaryTextColor">
-               Loading....
+                Loading....
             </p>
         </>
     }
     return (
         <div className="container mt-20">
-            <div className="category_title mb-4">
+            <div className="category_title mb-4 text-center">
                 <p className="heading">All Categories</p>
                 <p className="sub--heading">Our Collection</p>
             </div>
@@ -79,13 +84,13 @@ export default function Categories(props) {
                                 </div>
                             </div>
                             <div className="category--details mt-3 mx-3">
-                                <div className="category--price flex justify-between items-center">
+                                <div className="category--price grid justify-between items-center">
                                     <div>
                                         <p className="item--heading">{item.category}</p>
                                         <p className="item--sub">{item.title}</p>
                                     </div>
                                     <div>
-                                        <h1 className="item--price">₹ {item.price} <del className="item-del">₹ {item.price}</del></h1>
+                                        <h1 className="item--price mt-2">₹ {item.price} <del className="item-del">₹ {item.price}</del></h1>
                                     </div>
                                 </div>
                                 <div className="mt-3">

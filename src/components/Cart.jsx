@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 export default function Cart(props) {
 
   const {
@@ -48,7 +48,7 @@ export default function Cart(props) {
 
       }
       {
-        cartList.length > 0 ? <div><p>View Cart</p></div> : ""
+        cartList.length > 0 ? <div><Link to={"/cartpage"}><p className="primaryTextColor mt-2 font-bold underline">View Cart</p></Link></div> : ""
       }
     </ul>
   </div>

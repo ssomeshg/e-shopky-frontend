@@ -55,7 +55,7 @@
   display: flex;
   gap: 20px;
 } */
-.navitems .navList li{
+.navitems .navList li a{
   font-size: 16px;
   font-weight: 500;
   color: var(--primary-color);

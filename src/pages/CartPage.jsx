@@ -7,12 +7,14 @@ export default function CartPage(props) {
         cartList,
         setCartList
     } = props
+
        // Calculate the total price of the cart
     //    const cartPrice = cartList.map((item) => {
     //     const itemTotal = item.price.reduce((sum, price) => sum + price, 0);
     //     return itemTotal;
     // }, 0);
     // console.log(cartPrice)
+    
     const handleRemoveCart = (removeID) => {
         console.log(removeID)
         const tempCart = cartList.filter((item) => {

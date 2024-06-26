@@ -21,7 +21,7 @@ export default function Navbar(props) {
         <img src={navLogo} alt="" />
       </div>
       <div className="navitems">
-        <ul className='hidden md:flex md:gap-5 md:relative'>
+        <ul className='navList hidden md:flex md:gap-5 md:relative'>
           <li><Link to={'/'}>Home</Link></li>
           <li><Link to={'/'}>Collections</Link></li>
           <li><Link to={'/'}>Men's</Link></li>
@@ -56,7 +56,7 @@ export default function Navbar(props) {
         <div className="hidden md:flex md:gap-5 profile">
           <div className="profile--detail">
             <p>Hello user</p>
-            <p>sign in</p>
+            <Link to={'/login'}><p>sign in</p></Link>
           </div>
           <div className="profile--icon">
             <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
